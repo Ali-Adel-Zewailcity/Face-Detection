@@ -48,15 +48,15 @@ In the Project, The process of extracting images from the web is illustrated usi
 > The Images and Videos used in this project are already uploaded in `/Images` and there is no need to run that part of the project.
 
 2. **Detecting and Cropping Faces**  
-- Use `dlib’s face detector` to find faces and crop them.
-- The model used is `dlib's HOG` model.
-- A model like `CNN` is ignored because it is computationally heavy, requires a lot of resources and is time-consuming.
-- Setting dlib detector **upsamlping ratio** to `1` as the speed is required since detecting very small faces is not a primary concern for this project.
-- Cropping the most left-upper face in the image.
+    - Use `dlib’s face detector` to find faces and crop them.
+    - The model used is `dlib's HOG` model.
+    - A model like `CNN` is ignored because it is computationally heavy, requires a lot of resources and is time-consuming.
+    - Setting dlib detector **upsamlping ratio** to `1` as the speed is required since detecting very small faces is not a primary concern for this project.
+    - Cropping the most left-upper face in the image.
 
 3. **Cropping Specific Regions (e.g., Eyes)**
-- With `dlib’s 68 facial landmarks`, you can isolate regions like Eyes, Lips and Nose.
+    - With `dlib’s 68 facial landmarks`, you can isolate regions like Eyes, Lips and Nose.
 
 4. **Face Censoring in Video**
-- Detecting Faces in Videos using OpenCV’s pre-trained `Haar Cascade` model to detect faces. 
-- Censoring the detected face area and writing the result to a new video.
+    - Detecting Faces in Videos using OpenCV’s pre-trained `Haar Cascade` model to detect faces. 
+    - Censoring the detected face area and writing the result to a new video.
